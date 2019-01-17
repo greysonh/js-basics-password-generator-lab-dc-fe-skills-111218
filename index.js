@@ -14,7 +14,7 @@ window.addEventListener("load", function (e) {
   //This calculates a random password
   function calculatePassword(length) {
     var password = getUppercaseLetter() + getLowercaseLetter() + getSpecialChar() + getNumber();
-    
+    for (var)
     console.log(password);
     return password;
   }
