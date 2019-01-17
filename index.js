@@ -14,7 +14,8 @@ window.addEventListener("load", function (e) {
   //This calculates a random password
   function calculatePassword(length) {
     
-        function getUppercaseLetter() {
+    //These four functions calculate each of the required characters
+    function getUppercaseLetter() {
       return String.fromCharCode(65 + Math.floor(Math.random() * 26));
     }
     function getLowercaseLetter() {
@@ -27,10 +28,13 @@ window.addEventListener("load", function (e) {
       return Math.floor(Math.random() * 10);
     }
     
+    //This concatenates the four required characters into a variable, and loops through lower case letters to fill out required password length
+    
     var password = getUppercaseLetter() + getLowercaseLetter() + getSpecialChar() + getNumber();
+    
     for (var i = passwordLength - 4; i > 0; i--) {
     password = password + getLowercaseLetter();
-  }
+    }
     console.log(password);
     return password;
   }
