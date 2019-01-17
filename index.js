@@ -14,18 +14,18 @@ window.addEventListener("load", function (e) {
   //This calculates a random password
   function calculatePassword(length) {
     
-      function getUppercaseLetter() {
-    return String.fromCharCode(65 + Math.floor(Math.random() * 26));
-  }
-  function getLowercaseLetter() {
-    return  getUppercaseLetter().toLowerCase();
-  }
-  function getSpecialChar() {
-    return String.fromCharCode(33 + Math.floor(Math.random() * 15));
-  }
-  function getNumber() {
-    return Math.floor(Math.random() * 10);
-  }
+        function getUppercaseLetter() {
+      return String.fromCharCode(65 + Math.floor(Math.random() * 26));
+    }
+    function getLowercaseLetter() {
+      return  getUppercaseLetter().toLowerCase();
+    }
+    function getSpecialChar() {
+      return String.fromCharCode(33 + Math.floor(Math.random() * 15));
+    }
+    function getNumber() {
+      return Math.floor(Math.random() * 10);
+    }
     
     var password = getUppercaseLetter() + getLowercaseLetter() + getSpecialChar() + getNumber();
     for (var i = passwordLength - 4; i > 0; i--) {
